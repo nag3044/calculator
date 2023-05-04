@@ -16,7 +16,7 @@ jobs:
     
    - name: Build with maven
      run: mvn -B clean install package --file pom.xml
-   - run: mkdir staging && cp target/*.war targte/*.jar staging
+   - run: mkdir staging && cp target staging
    - uses: actions/upload-artifact@v1
      with:
         name: package
